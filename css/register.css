@@ -1,10 +1,24 @@
 #logo{
 	width: 10%;
 }
-
-#formContainer{
-	margin-left: auto;
+.bodyContainer{
+	display: flex;
+	width: 60%;
+	margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 10%;
+	min-width: 30%;
 }
-#registerForm{
-	margin: right;
+
+
+#loginForm{
+	width: 50%;
+	padding: 2%;
+}
+
+.input-field{
+	width: 70%;
+	margin: auto;
 }
