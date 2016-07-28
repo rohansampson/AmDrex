@@ -1,14 +1,36 @@
-.top{
-      padding-left: 240px;
-    }
 
 .main{
-      padding-left: 240px;
-    }
+  padding-left: 5%;
+}
 
+@media only screen and (max-width : 992px) {
 
-    @media only screen and (max-width : 992px) {
-      header, main, footer {
-        padding-left: 0;
-      }
-    }
+  .mainContainer{
+    width: 100%;
+    margin-left:0;
+  }
+}
+
+@media only screen and (min-width: 993px){
+  .mainContainer{
+    width: 80%;
+    margin-left: 20%;
+  }
+}
+
+.sidenav{
+  width: 20%;
+}
+
+.dashboardHeader{
+  padding-right: 5%;
+}
+.formContainer{
+  width: 50%;
+  margin: 5% auto 0 auto;
+  padding: 5%;
+}
+
+.submitButton{
+  margin-left: 0.75em;
+}

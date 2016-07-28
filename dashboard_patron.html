@@ -15,29 +15,26 @@
   <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
 
-<div class="left">
-  <header>
-    <ul id="nav-mobile" class="side-nav fixed">
-            <br>
-            <br>
-            <li class="bold"><a href="about.html" class="waves-effect waves-teal">Option1</a></li>
-            <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Option2</a></li>
-            <li class="bold"><a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Option3</a></li>
-            <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">Option4</a></li>
-          </ul>
-  </header>
-</div>
 
-<div class="top">
-  <nav class="indigo darken-2">
+
+  <ul id="nav-mobile" class="side-nav fixed sideNav">
+    <br>
+    <br>
+    <li class="bold"><a href="about.html" class="waves-effect waves-teal">Profile</a></li>
+    <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Issues</a></li>
+    <li class="bold"><a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Groups</a></li>
+    <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">Events</a></li>
+  </ul>
+
+
+
+<div class = "mainContainer">
+  <nav class="indigo darken-2 topNavBar">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Patron</a>
+      <a href="#!" class="dashboardHeader brand-logo">Patron Dashboard</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Profile</a></li>
-        <li><a href="badges.html">Groups</a></li>
-        <li><a href="collapsible.html">Events</a></li>
-        <li><a href="mobile.html">Issues</a></li>
+        <li><a href="sass.html">Home</a></li>
         <li><a class="waves-effect waves-light btn">Logout</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
@@ -49,25 +46,46 @@
       </ul>
     </div>
   </nav>
-</div>
 
-<div class="main">
-  <div class="row">
-        <div class="col s12 m6">
-          <div class="card horizontal">
-            <div class="card-content">
-              <span class="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-          </div>
+<!-- DELETE THIS FOR ADMIN DASHBOARD -->
+  <div class="formContainer card">
+    <form class="col s12 l12 m6">
+      <div class="row">
+        <div class="input-field col s12 l12 m6">
+          <input id="issueTitle" type="text" class="validate">
+          <label for="issueTitle" data-error="wrong" data-success="right">Issue Title</label>
         </div>
       </div>
-    </div>
 
+      <div class="row">
+        <div class="input-field col s12 l12 m6">
+          <input id="issueDetail" type="text" class="validate">
+          <label for="issueDetail" data-error="wrong" data-success="right">Issue Details</label>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class="input-field col s12 l12 m6">
+          <select>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label>Materialize Select</label>
+        </div>
+      </div>
+
+      <a class="waves-effect waves-light btn submitButton">Submit</a>
+    </form>
+  </div>
+
+  <!-- DELETE TILL HERE -->
+</div>
+<script>
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+</script>
 </body>
 </html>
