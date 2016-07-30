@@ -27,13 +27,20 @@
 
 
 .card {
-  width: 50%;
+  width: 30%;
   margin: 5% auto 0 auto;
   padding: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.card img {
+  margin: auto;
 }
 
 .card-header img{
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .card-content h5 {
