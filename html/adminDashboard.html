@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+    <link type = "text/css" rel = "stylesheet" href = "../css/adminDashboard.css"/>
+    <link type = "text/css" rel = "stylesheet" href = "../css/animate.css"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body class = "grey lighten-4">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+    <div class = "sideNav">
+      <ul id="slide-out" class="side-nav fixed">
+        <li>
+          <div class="userView">
+            <img class="background" src="../media/wall1.png" style = "width: 100%">
+            <a href="#!user"><img class = "circle z-depth-2" src="../media/profilePic.jpg"></a>
+            <div class = "userDetails">
+              <a href="#!name"><span class="white-text name">Stormtrooper</span></a>
+              <a href="#!email"><span class="white-text email">trooper1001@vader.com</span></a>
+            </div>
+          </div>
+        </li>
+        <li class = "accessItems"><a class="waves-effect accessItemsText" id = "issueTab" href="#!">Issues</a></li>
+        <li class = "accessItems"><a class="waves-effect accessItemsText" id = "editLocationsTab" href="#!">Edit Locations</a></li>
+        <li class = "accessItems"><a class="waves-effect accessItemsText" id = "userManagementTab" href="#!">User Management</a></li>
+      </ul>
+    </div>
+
+    <div class = "restOfTheBody">
+      <!-- Issue management dashboard-->
+
+      <div class = "issuesDashboard">
+        <div class = "navContainer">
+          <nav class = "amber darken-1 topNavBar">
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons menuIcon">menu</i></a>
+            <a href = "adminDashboard.html" class = "pageName right black-text">Dashboard</a>
+          </nav>
+        </div>
+
+        <div class = "descriptionDiv valign-wrapper">
+          <div class = "description white-text">
+            <span class = "valign ">Issues</span>
+            <p>Track and view all user issues here including yours</p>
+          </div>
+        </div>
+        <a class="btn-floating btn-large waves-effect waves-light red addIssueButton"><i class="material-icons">add</i></a>
+
+        <div class = "issueListContainer">
+          <span class = "issueListHeader z-depth-1">Issue List</span>
+          <ul class="collapsible popout" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">filter_drama</i>Issue Topic 1</div>
+              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">place</i>Issue Topic 2</div>
+              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Issue Topic 3</div>
+              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Location management dashboard-->
+
+      <div class = "editLocationsDashboard">
+        <div class = "navContainer">
+        
+          <nav class = "red darken-1 topNavBar">
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons menuIcon">menu</i></a>
+            <a class = "pageName right black-text" id = "editLocationsTopNavTab">Edit Locations</a>
+          </nav>
+        </div>
+
+        <div class = "descriptionDiv valign-wrapper">
+          <div class = "description white-text">
+            <span class = "valign ">Location Management</span>
+            <p>Add or delete locations here</p>
+          </div>
+        </div>
+        <a class="btn-floating btn-large waves-effect waves-light amber accent-4 addIssueButton"><i class="material-icons black-text">add</i></a>
+
+        <div class = "locationListContainer">
+          <span class = "locationListHeader amber accent-3 black-text z-depth-1 center">Locations</span>
+          <div class = "locationList">
+            <div class = "card locations">
+              <div class = "locationName" style = "display: inline-block;">Bangalore</div>              
+              <a class = "right deleteLocationButton modal-trigger" href = "#deleteConfModal"><i class="material-icons black-text">close</i></a>              
+            </div>
+            <div class = "card locations">
+              <div class = "locationName" style = "display: inline-block;">Washington</div>              
+              <a class = "right deleteLocationButton modal-trigger" href = "#deleteConfModal"><i class="material-icons black-text">close</i></a>              
+            </div>
+            <div class = "card locations">
+              <div class = "locationName" style = "display: inline-block;">Hoth</div>              
+              <a class = "right deleteLocationButton modal-trigger" href = "#deleteConfModal"><i class="material-icons black-text">close</i></a>              
+            </div>
+            <div class = "card locations">
+              <div class = "locationName" style = "display: inline-block;">Tatooine</div>
+              <a class = "right deleteLocationButton modal-trigger" href = "#deleteConfModal"><i class="material-icons black-text">close</i></a>              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- User management dashboard-->
+
+      <div class = "userManagementDashboard">
+        <div class = "navContainer">
+        
+          <nav class = "deep-purple topNavBar">            
+              <a class = "pageName right white-text right" id = "userManagementTopNavTab">User Management</a>
+              <a href="#" data-activates="slide-out" class="button-collapse left"><i class="material-icons menuIcon">menu</i></a>
+          </nav>
+        </div>
+
+        <div class = "descriptionDiv valign-wrapper">
+          <div class = "description white-text">
+            <span class = "valign">User Management</span>
+            <p>Add, delete and give permissions to users here</p>
+          </div>
+        </div>
+        <a class="btn-floating btn-large waves-effect waves-light amber accent-1 addIssueButton"><i class="material-icons black-text">add</i></a>
+
+        <div class = "locationListContainer">
+          <div class = "userListHeader amber accent-1 black-text z-depth-1">Users</div>
+
+          <nav class = "navBar userSearch red accent-3">
+            <div class="nav-wrapper">
+              <form>
+                <div class="input-field col s12">
+                  <input id="search" type="search" required placeholder="Enter name/email of the user">
+                  <label for="search"><i class="material-icons searchIcon">search</i></label>
+                  <i class="material-icons">close</i>
+                </div>
+              </form>
+            </div>
+          </nav>
+          
+          <div class = "locationList userNameList">
+            <div class = "card locations userNameContainer">
+              <div class = "userName" style = "display: inline-block;">Jabba</div>              
+              <a class='dropdown-button right' href='#' data-activates='dropdown1'><i class="material-icons black-text">list</i></a>
+
+              <!-- Dropdown Structure -->
+              <ul id='dropdown1' class='dropdown-content dropdownContent grey lighten-4'>
+                <li><a href="#!">Give Patron rights</a></li>
+                <li><a href="#!">Give Admin rights</a></li>
+                <li><a href="#!">Give Ops rights</a></li>
+                <li><a href="#deleteUserModal" class = "modal-trigger deleteUserOption white-text">Delete user</a></li>
+              </ul>             
+            </div>
+
+            <div class = "card locations userNameContainer">
+              <div class = "userName" style = "display: inline-block;">Luke</div>              
+              <a class='dropdown-button right' href='#' data-activates='dropdown2'><i class="material-icons black-text">list</i></a>
+
+              <!-- Dropdown Structure -->
+              <ul id='dropdown2' class='dropdown-content dropdownContent grey lighten-4'>
+                <li><a href="#!">Give Patron rights</a></li>
+                <li><a href="#!">Give Admin rights</a></li>
+                <li><a href="#!">Give Ops rights</a></li>
+                <li><a href="#deleteUserModal" class = "modal-trigger deleteUserOption white-text">Delete user</a></li>
+              </ul>             
+            </div>
+            <div class = "card locations userNameContainer">
+              <div class = "userName" style = "display: inline-block;">Anakin</div>              
+              <a class='dropdown-button right' href='#' data-activates='dropdown3'><i class="material-icons black-text">list</i></a>
+
+              <!-- Dropdown Structure -->
+              <ul id='dropdown3' class='dropdown-content dropdownContent grey lighten-4'>
+                <li><a href="#!">Give Patron rights</a></li>
+                <li><a href="#!">Give Admin rights</a></li>
+                <li><a href="#!">Give Ops rights</a></li>
+                <li><a href="#deleteUserModal" class = "modal-trigger deleteUserOption white-text">Delete user</a></li>
+              </ul>             
+            </div>
+            <div class = "card locations userNameContainer">
+              <div class = "userName" style = "display: inline-block;">Leia</div>              
+              <a class='dropdown-button right' href='#' data-activates='dropdown4'><i class="material-icons black-text">list</i></a>
+
+              <!-- Dropdown Structure -->
+              <ul id='dropdown4' class='dropdown-content dropdownContent grey lighten-4'>
+                <li><a href="#!">Give Patron rights</a></li>
+                <li><a href="#!">Give Admin rights</a></li>
+                <li><a href="#!">Give Ops rights</a></li>
+                <li><a href="#deleteUserModal" class = "modal-trigger deleteUserOption white-text">Delete user</a></li>
+              </ul>             
+            </div>
+
+            <div class = "card locations userNameContainer">
+              <div class = "userName" style = "display: inline-block;">Han Solo</div>              
+              <a class='dropdown-button right' href='#' data-activates='dropdown5'><i class="material-icons black-text">list</i></a>
+
+              <!-- Dropdown Structure -->
+              <ul id='dropdown5' class='dropdown-content dropdownContent grey lighten-4'>
+                <li><a href="#!">Give Patron rights</a></li>
+                <li><a href="#!">Give Admin rights</a></li>
+                <li><a href="#!">Give Ops rights</a></li>
+                <li><a href="#deleteUserModal" class = "modal-trigger deleteUserOption white-text">Delete user</a></li>
+              </ul>             
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- ISSUE FORM MODAL-->
+      <div class = "issueModal" id = "issueModal">
+        <div class = "issueForm">
+          <div class = "white-text modalHeader" style = "display: inline-block;">Issue Form</div>
+          <i class="material-icons circle right closeButton" id = "closeButton" style = "display: inline-block;">close</i>
+          <form class="col l12 m12 s12 z-depth-1 white fieldForm">
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="issueTitle" type="text" class="validate">
+                <label for="issueTitle">Issue Title</label>
+              </div>
+            </div>
+
+            <div class = "row">
+              <div class="input-field col s12">
+                <textarea id="issueDesc" class="materialize-textarea"></textarea>
+                <label for="issueDesc">Issue Details</label>
+              </div>
+            </div>
+
+            <div class = "row">
+              <div class="input-field col l6 m6 s12">
+                <select>
+                  <option value="" disabled selected class = "grey-text">Choose Location</option>
+                  <option value="1">Bangalore</option>
+                  <option value="2">Washington</option>
+                  <option value="3">Hoth</option>
+                  <option value="3">Tatooine</option>
+                </select>
+                <label>Location</label>
+              </div>
+            </div>
+            <div style = "text-align: right; margin-right: 0.75em;">
+            <button id = "issueFormSubmitButton" class="btn waves-effect waves-light indigo accent-3" type="submit">Submit
+              <i class="material-icons right">send</i>
+            </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!--DELETE LOCATION CONFIRMATION MODAL-->
+      <div id="deleteConfModal" class="modal deleteModal">
+        <div class="modal-content">
+          <h4>Delete Location</h4>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Confirm</a>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat cancelButton">Cancel</a>          
+        </div>
+      </div>
+
+      <!--DELETE USER CONFIRMATION MODAL-->
+      <div id="deleteUserModal" class="modal deleteModal">
+        <div class="modal-content">
+          <h4>Delete User</h4>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Confirm</a>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat cancelButton">Cancel</a>          
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MATERIALIZE ELEMENTS DECLARATION -->
+    <script>
+
+      $(document)
+        .ready(function(){
+          $(".button-collapse").sideNav();
+          $('select').material_select();
+          $('.modal-trigger').leanModal();
+        });
+
+        /* show topNavBar when scrolling ends */
+        /*$.fn.scrollEnd = function(callback, timeout) {          
+          $(this).scroll(function(){
+            var $this = $(this);
+            if ($this.data('scrollTimeout')) {
+              clearTimeout($this.data('scrollTimeout'));
+            }
+            $this.data('scrollTimeout', setTimeout(callback,timeout));
+          });
+        };
+
+        // how to call it (with a 1000ms timeout):
+        $(window).scrollEnd(function(){
+            $('.topNavBar').closest('.navContainer').removeClass('navbar-fixed').hide();
+        }, 3000);
+        */
+    </script>
+
+    <!-- SCRIPT FOR HIDING AND SHOWING DIFFERENT DESKTOP VIEWS -->
+    <script>
+      /*  */
+
+      $('.addIssueButton').click(function(){
+        $('.issueModal').show();
+        $('.fieldForm').addClass('animated slideInDown').css('-animation-duration', '0.5s');
+        $('.closeButton').addClass('animated fadeInLeft').css('-animation-delay', '0.3s');
+        $('.modalHeader').addClass('animated fadeInRight').css('-animation-delay', '0.3s');
+      });
+
+      $('#issueTab').click(function(){
+        $('.issuesDashboard').show().addClass('animated fadeIn');
+        $('.editLocationsDashboard').hide();
+        $('.userManagementDashboard').hide();
+      });
+
+      $('#editLocationsTab').click(function(){
+        $('.issuesDashboard').hide();
+        $('.editLocationsDashboard').show().addClass('animated fadeIn');
+        $('.userManagementDashboard').hide();
+      });
+
+      $('#userManagementTab').click(function(){
+        $('.issuesDashboard').hide();
+        $('.editLocationsDashboard').hide();
+        $('.userManagementDashboard').show().addClass('animated fadeIn');
+      });
+    </script>
+
+    <!-- CUSTOM MODAL CLOSE -->
+    <script>
+
+      
+      window.onclick = function(event) {
+          if (event.target == document.getElementById('issueModal')) {
+              $('.issueModal').fadeOut();
+              $('.fieldForm').removeClass('animated slideInDown');
+          }
+
+          if (event.target == document.getElementById('closeButton')) {
+              $('.issueModal').fadeOut();
+          }
+      }
+    </script>
+
+    <!-- FILTER USERS SCRIPT -->
+    <script>
+      $('#search').keyup(function(){
+        var searchBoxValue = $('#search').val().toLowerCase(); 
+
+        if(searchBoxValue){
+          $('.userNameList').find(".userName:not(:contains("+ searchBoxValue + "))").parent().slideUp();
+          $('.userNameList').find(".userName:contains("+ searchBoxValue + ")").parent().slideDown();
+        }
+
+        else{
+          $('.userNameList').find(".userNameContainer").slideDown();
+        }        
+        
+      });
+      $.expr[":"].contains = $.expr.createPseudo(function(arg) {
+          return function( elem ) {
+              return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+          };
+      });
+    </script>
+
+    <!-- CUSTOM MISC SCRIPT -->
+    <script>
+      $(document).ready(function(){
+        var $width = $('body').width();
+
+        if($width < 400px)
+          $('.navContainer').addClass('navbar-fixed');
+      })   
+    </script>
+  </body>
+</html>
