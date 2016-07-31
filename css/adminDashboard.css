@@ -1,0 +1,371 @@
+body{
+	font-family: "robotoMedium", 'Myriad-Pro';
+}
+
+.menuIcon{
+	margin-left: 5%;
+}
+
+nav .button-collapse{
+	margin-left: 2%;
+}
+
+nav .button-collapse i{
+	font-size: 5vmax;
+}
+
+.pageName{
+	font-size: 1.5em;
+	margin-right: 2%;
+	border-radius: 50px;
+	text-align: center;
+}
+
+.collapsible-header{
+	transition: all .25s;
+}
+
+.collapsible{
+	border-radius: 2px;
+}
+.collapsible-header.active{
+	background-color: #ffc400;
+	transition: all .25s
+}
+
+
+.issueListHeader{
+	font-size: 1.3em;
+	border-radius: 50px;
+	margin-left: 1.2em;
+	background-color: #ef5350 ;
+	padding: 5px 10px 5px 10px;
+	color: white;
+	font-family: robotoLight;
+}
+
+.descriptionDiv{
+	height: 300px;
+	background-color: rgba(0,0,0,0.9);
+}
+
+.descriptionDiv span{
+	font-family: robotoLight;
+	font-size: 5vmax;
+}
+
+.descriptionDiv p{
+	font-family: robotoLight;
+}
+
+.description{
+	margin: auto;
+	text-align: center;
+}
+
+.addIssueButton{
+	margin-top: -28px;
+	margin-right: 10%;
+	float: right;
+}
+
+.issueModal{
+	display: none;
+	background-color: rgba(0,0,0,0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	padding: 5%;
+}
+
+.issueForm{	
+	width: 80%;
+}
+
+.fieldForm{
+	padding: 3%;
+	border-radius: 2px;
+	margin-top: 10px;
+	z-index: 10001;
+}
+
+.closeButton{
+	font-size: 1.2em;
+	padding: 2px;	
+	background-color: white;
+	color: black;
+	transition: all .25s;
+	cursor: pointer;
+	margin-right: -23px;
+	margin-top: 10px;
+}
+
+.closeButton:hover{
+	background-color: #ef5350;
+	color: white;
+}
+
+.editLocationsDashboard{
+	display: none;
+}
+
+#editLocationsTopNavTab{
+	cursor: pointer;
+}
+
+
+.locationListContainer .locations{
+	padding: 3%;
+	margin-bottom: 1%;
+}
+
+.locationListHeader{
+	font-size: 1.3em;
+	border-radius: 50px;
+	margin: auto;
+	background-color: #ef5350 ;
+	padding: 5px 10px 5px 10px;
+	color: white;
+	font-family: robotoLight;
+}
+
+.locationList{
+	margin-top: 20px;
+}
+
+#userManagementTopNavTab{
+	font-family: robotoLight;
+}
+
+.userListHeader{
+	font-size: 1.3em;
+	border-radius: 50px;
+	width: 70px;
+	background-color: #ef5350 ;
+	padding: 5px 10px 5px 10px;
+	color: white;
+	font-family: robotoLight;
+}
+
+.userManagementDashboard{
+	display: none;
+}
+
+.userSearch{
+	margin-top: 20px;
+	border-radius: 2px;
+}
+
+i.searchIcon{
+	color: rgba(255,255,255, 0.2);
+}
+::-webkit-input-placeholder {
+   color: rgba(255,255,255, 0.2);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(255,255,255, 0.2);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(255,255,255, 0.2);  
+}
+
+:-ms-input-placeholder {  
+   color: rgba(255,255,255, 0.2);  
+}
+
+nav .input-field label.active i{
+	color: rgba(255,255,255, 0.2);
+}
+
+.dropdownContent{
+	min-width: 150px;
+}
+
+.dropdownContent li{
+	transition: all .25s;
+}
+
+.dropdownContent li:hover{
+	background-color: rgba(0,0,0,0.1);
+	color: rgb(255,255,255);
+	transition: all .25s;
+}
+
+.deleteUserOption{
+	background-color: #e57373;
+	transition: all 0.25s;
+}
+
+.deleteUserOption:hover{
+	background-color: #f44336;
+	transition: all 0.25s;
+}
+
+@media screen and (min-width: 993px){
+
+	.restOfTheBody{
+		width: 80%;
+		margin-left: 20%;
+	}
+
+	.side-nav{
+		width: 20%;
+		min-width: 270px;
+	}
+
+	.issueListContainer{
+		width: 80%;
+		margin: 20px auto 0 auto;
+	}
+
+	.issueListContainer > ul{
+		margin-top: 20px;
+	}
+
+	.issueForm{
+		width: 60%;
+		margin: auto;
+	}
+
+	textarea.materialize-textarea{
+		max-height: 200px;
+		overflow-y: scroll;
+		margin-top: 10px;
+	}
+
+	.locationListContainer{
+		margin: 20px auto 50px auto;
+		width: 40%;
+	}
+
+	#search{
+		font-size: 1.2em;
+	}
+
+	.deleteModal{
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 401px) and (max-width: 992px){
+
+	.navContainer{
+		position: fixed;
+		width: 100%;
+	}
+	
+	.description{
+		margin: 7% auto 0 auto;
+	}
+
+	.restOfTheBody{
+		width: 100%;
+	}
+	.issueListContainer{
+		width: 95%;
+		margin: 20px auto 0 auto;
+	}
+	.issueListContainer > ul{
+		margin-top: 20px;
+	}
+
+	.descriptionDiv{
+		height: 200px;
+	}	
+
+	.issueForm{
+		margin: auto;
+		width: 80%;
+	}
+
+	textarea.materialize-textarea{
+		max-height: 200px;
+		overflow-y: scroll;
+		margin-top: 10px;
+	}
+
+	.locationListContainer{
+		margin: 20px auto 50px auto;
+		width: 80%;
+	}
+	#search{
+		font-size: 1.2em;
+	}
+
+	.deleteModal{
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 400px){
+
+	.description{
+		margin: 7% auto 0 auto;
+	}
+	.navContainer{
+		position: fixed;
+		width: 100%;
+	}
+
+	.issueListContainer{
+		width: 95%;
+		margin: 20px auto 0 auto;
+	}
+
+	.issueListContainer > ul{
+		margin-top: 20px;
+		margin-bottom: 100px;
+	}
+
+	.issueForm{
+		margin: auto;
+		width: 80%;
+	}
+	textarea.materialize-textarea{
+		max-height: 100px;
+		overflow-y: scroll;
+		margin-top: 10px;
+	}
+
+	.addIssueButton{
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		margin: 0 15px 15px 0;
+	}
+
+	.locationListContainer{
+		margin: 20px auto 100px auto;
+		width: 80%;
+	}
+
+	#search{
+		font-size: 1em;
+	}
+
+	.deleteModal{
+		width: 80%;
+	}
+
+	.cancelButton{
+		float: left !important;
+	}
+}
+
+@font-face {
+	font-family: robotoBold; 
+	src: url('../font/roboto/Roboto-Bold.ttf'); 
+}
+@font-face {
+	font-family: robotoMedium; 
+	src: url('../font/roboto/Roboto-Medium.ttf'); 
+}
+@font-face {
+	font-family: robotoLight; 
+	src: url('../font/roboto/Roboto-Light.ttf'); 
+}
