@@ -1,0 +1,64 @@
+
+.main{
+  padding-left: 5%;
+}
+
+@media only screen and (max-width : 992px) {
+
+  .mainContainer{
+    width: 100%;
+    margin-left:0;
+  }
+}
+
+@media only screen and (min-width: 993px){
+  .mainContainer{
+    width: 80%;
+    margin-left: 20%;
+  }
+}
+
+.sidenav{
+  width: 20%;
+}
+
+.dashboardHeader{
+  padding-right: 5%;
+}
+.formContainer{
+  width: 50%;
+  margin: 5% auto 0 auto;
+  padding: 5%;
+}
+
+.submitButton{
+  margin-left: 0.75em;
+}
+
+.card-image img{
+  display: block;
+  width: auto;
+  height: 240;;
+}
+
+@mixin column-count($ct) {
+  -webkit-column-count: $ct;
+  -moz-column-count: $ct;
+  column-count: $ct;
+}
+
+@media #{$small-and-down} {
+  .cards-container {
+    @include column-count(1);
+  }
+}
+@media #{$medium-and-up} {
+  .cards-container {
+    @include column-count(2);
+  }
+}
+@media #{$large-and-up} {
+  .cards-container {
+    @include column-count(2);
+  }
+}
