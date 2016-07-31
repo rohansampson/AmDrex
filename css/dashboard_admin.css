@@ -62,3 +62,8 @@
     @include column-count(2);
   }
 }
+
+.customCard{
+  width: 30%;
+  float: right;
+}
