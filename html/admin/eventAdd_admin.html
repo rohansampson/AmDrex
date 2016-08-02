@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/register.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/patron_home.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="grey lighten-4">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+
+
+
+    <ul id="nav-mobile" class="side-nav fixed sideNav">
+        <br>
+        <br>
+        <li class="bold"><a href="about.html" class="waves-effect waves-teal">Profile</a></li>
+        <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Issues</a></li>
+        <li class="bold"><a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Groups</a></li>
+        <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">Events</a></li>
+    </ul>
+
+
+
+    <div class="mainContainer">
+        <nav class="indigo darken-2 topNavBar">
+
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#!" class="breadcrumb">Admin</a>
+                    <a href="#!" class="breadcrumb">Event Management</a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div id="page_title">
+            <h4>Events</h4>
+        </div>
+
+        <div id="fab_add">
+            <a class="btn-floating btn-large waves-effect waves-light red" id="fab_add"><i class="material-icons">add</i></a>
+        </div>
+
+        <div class="formContainer card">
+            <form class="col s12 l12 m6">
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">today</i>
+                        <input id="start_date" placeholder="Pick a date" type="date" class="datepicker">
+                        <label for="start_date">Start Date</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">today</i>
+                        <input id="end_date" placeholder="Pick a date" type="date" class="datepicker">
+                        <label for="end_date">End Date</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="street" type="text" class="validate">
+                        <label for="street">Street</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input id="city" type="text" class="validate">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <select>
+                            <option value="" disabled selected>State</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>State</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input id="zip" type="text" class="validate">
+                        <label for="zip">Zip</label>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="locations" type="text" class="validate">
+                        <label for="locations">Locations</label>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- DELETE TILL HERE -->
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+    </script>
+</body>
+
+</html>
