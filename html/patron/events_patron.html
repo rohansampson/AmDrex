@@ -10,6 +10,32 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+<style>
+@media screen and (min-width: 993px){
+
+	.main{
+		width: 80%;
+		margin-left: 20%;
+	}
+
+.side-nav{
+		width: 20%;
+		min-width: 100px;
+	}
+ 	.main{
+		width: 80%;
+		
+	}
+	.main > ul{
+		margin-top: 20px;
+	}
+.card{
+		width: 70%;
+		
+		
+	}
+}
+</style>
 
 <body class="grey lighten-4">
     <!--Import jQuery before materialize.js-->
@@ -18,7 +44,7 @@
 
 
 
-    <ul id="nav-mobile" class="side-nav fixed sideNav">
+    <ul id="nav-mobile" class="side-nav fixed side-nav">
         <br>
         <br>
         <li class="bold"><a href="about.html" class="waves-effect waves-teal">Profile</a></li>
@@ -29,7 +55,7 @@
 
 
 
-    <div class="mainContainer">
+    <div class="mainContainer main">
         <nav class="indigo darken-2 topNavBar">
             <div class="nav-wrapper">
                 <a href="#!" class="dashboardHeader brand-logo">Patron Events</a>
