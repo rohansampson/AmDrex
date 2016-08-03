@@ -112,31 +112,92 @@
                 </div>
 
                 <table class="highlight responsive-table">
+                    <h5>Global Permissions</h5><br />
                     <thead>
                         <tr>
-                            <th data-field="id">Name</th>
-                            <th data-field="name">Item Name</th>
-                            <th data-field="price">Item Price</th>
+                            <th data-field="null"></th>
+                            <th data-field="view">View</th>
+                            <th data-field="manage">Manage</th>
+                            <th data-field="create">Create</th>
+                            <th data-field="edit">Edit</th>
+                            <th data-field="delete">Delete</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
+                            <td>User</td>
+                            <td>
+                                <input type="checkbox" id="userView" checked="checked" />
+                                <label for="userView"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="userManage" checked="checked" />
+                                <label for="userManage"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="userCreate" checked="checked" />
+                                <label for="userCreate"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="userEdit" checked="checked" />
+                                <label for="userEdit"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="userDelete" checked="checked" />
+                                <label for="userDelete"></label>
+                            </td>
                         </tr>
+
                         <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
+                            <td>Groups</td>
+                            <td>
+                                <input type="checkbox" id="groupsView" checked="checked" />
+                                <label for="groupsView"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="groupsManage" checked="checked" />
+                                <label for="groupsManage"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="groupsCreate" checked="checked" />
+                                <label for="groupsCreate"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="groupsEdit" checked="checked" />
+                                <label for="groupsEdit"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="groupsDelete" checked="checked" />
+                                <label for="groupsDelete"></label>
+                            </td>
                         </tr>
+
                         <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
+                            <td>Events</td>
+                            <td>
+                                <input type="checkbox" id="eventsView" checked="checked" />
+                                <label for="eventsView"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="eventsManage" checked="checked" />
+                                <label for="eventsManage"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="eventsCreate" checked="checked" />
+                                <label for="eventsCreate"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="eventsEdit" checked="checked" />
+                                <label for="eventsEdit"></label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="eventsDelete" checked="checked" />
+                                <label for="eventsDelete"></label>
+                            </td>
                         </tr>
                     </tbody>
+                </table>
 
             </form>
         </div>
