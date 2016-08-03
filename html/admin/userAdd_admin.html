@@ -52,7 +52,91 @@
         <div class="formContainer card">
             <form class="col s12 l12 m6">
 
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+                    </div>
 
+                    <div class="file-field input-field col s6">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Upload Picture">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="email" type="text" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <select>
+                            <option value="" disabled selected>Status</option>
+                            <option value="active">Active</option>
+                            <option value="suspended">Suspended</option>
+                        </select>
+                        <label>Status</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="events" type="text" class="validate">
+                        <label for="users">Events</label>
+                    </div>
+
+
+                    <div class="input-field col s6">
+                        <input id="groups" type="text" class="validate">
+                        <label for="groups">Groups</label>
+                    </div>
+                    <ul class="collection col s6">
+                        <li class="collection-item">Alvin</li>
+                        <li class="collection-item">Alvin</li>
+                        <li class="collection-item">Alvin</li>
+                        <li class="collection-item">Alvin</li>
+                    </ul>
+
+                    <ul class="collection col s6">
+                        <li class="collection-item">Alvin</li>
+                        <li class="collection-item">Alvin</li>
+                        <li class="collection-item">Alvin</li>
+                        <li class="collection-item">Alvin</li>
+                    </ul>
+                </div>
+
+                <table class="highlight responsive-table">
+                    <thead>
+                        <tr>
+                            <th data-field="id">Name</th>
+                            <th data-field="name">Item Name</th>
+                            <th data-field="price">Item Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Alvin</td>
+                            <td>Eclair</td>
+                            <td>$0.87</td>
+                        </tr>
+                        <tr>
+                            <td>Alan</td>
+                            <td>Jellybean</td>
+                            <td>$3.76</td>
+                        </tr>
+                        <tr>
+                            <td>Jonathan</td>
+                            <td>Lollipop</td>
+                            <td>$7.00</td>
+                        </tr>
+                    </tbody>
 
             </form>
         </div>
