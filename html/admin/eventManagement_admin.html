@@ -10,6 +10,43 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+<style>
+@media screen and (min-width: 993px){
+.fab_add{
+	 margin-top: -60px;
+	margin-right: 30%;
+	float: right;
+}
+
+	.main{
+		width: 80%;
+		margin-left: 20%;
+	}
+
+.side-nav{
+		width: 20%;
+		min-width: 100px;
+	}
+ .table {
+	    width: 100%;
+	font-size:larger;
+	border-collapse: separate;
+    border-spacing: 20px;	 
+	padding-left:30px;
+	      }
+ 	.main{
+		width: 80%;
+		
+	}
+	.main > ul{
+		margin-top: 20px;
+	}
+.card{
+		width: 70%;
+		
+		
+	}
+</style>
 
 <body class="grey lighten-4">
     <!--Import jQuery before materialize.js-->
@@ -18,18 +55,18 @@
 
 
 
-    <ul id="nav-mobile" class="side-nav fixed sideNav">
+    <ul id="nav-mobile" class="side-nav fixed side-nav">
         <br>
         <br>
         <li class="bold"><a href="about.html" class="waves-effect waves-teal">Profile</a></li>
         <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Issues</a></li>
-        <li class="bold"><a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Groups</a></li>
-        <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">Events</a></li>
+        <li class="bold"><a href="groupManagement_admin.html" class="waves-effect waves-teal">Groups</a></li>
+        <li class="bold"><a href="eventManagement_admin.html" class="waves-effect waves-teal">Events</a></li>
     </ul>
 
 
 
-    <div class="mainContainer">
+    <div class="mainContainer main">
         <nav class="indigo darken-2 topNavBar">
 
             <div class="nav-wrapper">
@@ -45,20 +82,19 @@
             <h4>Events</h4>
         </div>
 
-        <div id="fab_add">
-            <a class="btn-floating btn-large waves-effect waves-light red" id="fab_add"><i class="material-icons">add</i></a>
+        <div>
+            <a class="btn-floating btn-large waves-effect waves-light red fab_add"><i class="material-icons">add</i></a>
         </div>
 
         <div class="formContainer card">
             <form class="col s12 l12 m6">
 
-                <table class="highlight responsive-table">
+                <table class="highlight responsive-table table">
                     <thead>
                         <tr>
                             <th data-field="id">Name</th>
                             <th data-field="name">Status</th>
                             <th data-field="price">Date</th>
-                            <th data-field="action"></th>
                         </tr>
                     </thead>
 
@@ -67,28 +103,16 @@
                             <td>Alvin</td>
                             <td>Setup</td>
                             <td>MM/DD/YY</td>
-                            <td>
-                                <a class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons">delete</i></a>
-                                <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
-                            </td>
                         </tr>
                         <tr>
                             <td>Alan</td>
                             <td>Setup</td>
                             <td>MM/DD/YY</td>
-                            <td>
-                                <a class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons">delete</i></a>
-                                <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
-                            </td>
                         </tr>
                         <tr>
                             <td>Jonathan</td>
                             <td>Closed</td>
                             <td>MM/DD/YY-MM/DD/YY</td>
-                            <td>
-                                <a class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons">delete</i></a>
-                                <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
-                            </td>
                         </tr>
                     </tbody>
                 </table>
