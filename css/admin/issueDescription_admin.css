@@ -1,0 +1,105 @@
+
+.main{
+  padding-left: 5%;
+}
+
+@media only screen and (max-width : 992px) {
+
+  .mainContainer{
+    width: 100%;
+    margin-left:0;
+  }
+}
+
+@media only screen and (min-width: 993px){
+  .mainContainer{
+    width: 80%;
+    margin-left: 20%;
+  }
+}
+
+.sidenav{
+  width: 20%;
+}
+
+.dashboardHeader{
+  padding-right: 5%;
+}
+.formContainer{
+  width: 50%;
+  margin: 5% auto 0 auto;
+  padding: 0%;
+}
+
+.submitButton{
+  margin-left: 0.75em;
+}
+
+#issueTitle{
+  padding: 5%;
+}
+
+#tsStripe1{
+  padding: 5%;
+  padding-bottom: 0%;
+}
+
+#tsStripe2{
+  padding: 5%;
+  padding-top: 0%;
+}
+
+#linkedUsers1{
+  padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 0%;
+
+}
+
+#linkedUsers2{
+  padding: 5%;
+  padding-top: 0%;
+  padding-bottom: 2%;
+}
+
+#fab1{
+  margin-right: 27%;
+  margin-top: 2.5%;
+}
+
+#fab2{
+  margin-right: 1%;
+  margin-top: 2.5%;
+}
+
+#fab3{
+  margin-right: 1%;
+  margin-top: 2.5%;
+}
+
+#issueSummary{
+  padding: 5%;
+  padding-top: 2%;
+}
+
+summary{
+  padding-bottom: 5%;
+}
+
+#issueDescription{
+  padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 0%;
+}
+
+#chipsLabel{
+  padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 0%;
+}
+
+#chipsLocation{
+  padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
