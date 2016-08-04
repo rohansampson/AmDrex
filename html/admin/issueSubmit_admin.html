@@ -31,65 +31,53 @@
 
     <div class="mainContainer">
         <nav class="indigo darken-2 topNavBar">
-
             <div class="nav-wrapper">
                 <div class="col s12">
                     <a href="#!" class="breadcrumb">Admin</a>
                     <a href="#!" class="breadcrumb">Issue Management</a>
+                    <a href="#!" class="breadcrumb">Issue Submission</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="sass.html">Home</a></li>
                         <li><a class="waves-effect waves-light btn">Logout</a></li>
                     </ul>
                 </div>
-            </div>
 
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="sass.html">Profile</a></li>
+                    <li><a href="badges.html">Groups</a></li>
+                    <li><a href="collapsible.html">Events</a></li>
+                    <li><a href="mobile.html">Issues</a></li>
+                    <li><a class="waves-effect waves-light btn">Logout</a></li>
+                </ul>
+            </div>
         </nav>
 
+        <!-- DELETE THIS FOR ADMIN DASHBOARD -->
         <div class="formContainer card">
             <form class="col s12 l12 m6">
+                <div class="row">
+                    <div class="input-field col s12 l12 m6">
+                        <input id="issueTitle" type="text" class="validate">
+                        <label for="issueTitle" data-error="wrong" data-success="right">Issue Title</label>
+                    </div>
+                </div>
 
-                <table class="highlight responsive-table">
-                    <thead>
-                        <tr>
-                            <th data-field="id">Issue Name</th>
-                            <th data-field="name">Last Updated Timestamp</th>
-                            <th data-field="price">Status</th>
-                            <th data-field="action"></th>
-                        </tr>
-                    </thead>
+                <div class="row">
+                    <div class="input-field col s12 l12 m6">
+                        <input id="issueDetail" type="text" class="validate">
+                        <label for="issueDetail" data-error="wrong" data-success="right">Issue Details</label>
+                    </div>
+                </div>
 
-                    <tbody>
-                        <tr>
-                            <td>Issue 1</td>
-                            <td>[timestamp]</td>
-                            <td>Status 1</td>
-                            <td>
-                                <a class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons">delete</i></a>
-                                <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Issue 2</td>
-                            <td>[timestamp]</td>
-                            <td>Status 2</td>
-                            <td>
-                                <a class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons">delete</i></a>
-                                <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Issue 3</td>
-                            <td>[timestamp]</td>
-                            <td>Status 3</td>
-                            <td>
-                                <a class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons">delete</i></a>
-                                <a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="row">
+                    <div class="input-field col s12 l12 m6">
+                        <input id="issueLabel" type="text" class="validate">
+                        <label for="issueLabel" data-error="wrong" data-success="right">Issue Label</label>
+                    </div>
+                </div>
 
+                <a class="waves-effect waves-light btn submitButton">Submit</a>
             </form>
         </div>
 
