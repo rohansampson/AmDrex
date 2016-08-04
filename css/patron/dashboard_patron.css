@@ -1,24 +1,3 @@
-.bodyContainer{
-	display: flex;
-	width: 60%;
-	margin: 0 auto;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-	margin-top: 10%;
-	min-width: 30%;
-}
-
-.input-field{
-	width: 70%;
-	margin: auto;
-}
-
-.buttons{
-	padding-right: 0.75em;
-}
-
-
 
 .main{
   padding-left: 5%;
@@ -54,4 +33,20 @@
 
 .submitButton{
   margin-left: 0.75em;
+}
+
+.bodyContainer{
+	display: flex;
+	width: 60%;
+	margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 10%;
+	min-width: 30%;
+}
+
+.input-field{
+	width: 70%;
+	margin: auto;
 }

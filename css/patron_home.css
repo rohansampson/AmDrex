@@ -34,3 +34,32 @@
 .submitButton{
   margin-left: 0.75em;
 }
+
+.bodyContainer{
+	display: flex;
+	width: 60%;
+	margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 10%;
+	min-width: 30%;
+}
+
+.input-field{
+	width: 70%;
+	margin: auto;
+}
+
+#page_title{
+  padding-left: 5%;
+}
+
+.breadcrumb{
+  padding-left: 1%
+}
+
+#fab_add{
+  margin-right: 15%;
+  margin-top: 1%;
+}

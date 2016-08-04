@@ -31,33 +31,50 @@
 
     <div class="mainContainer">
         <nav class="indigo darken-2 topNavBar">
+
             <div class="nav-wrapper">
-                <a href="#!" class="dashboardHeader brand-logo">Patron Events</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Home</a></li>
-                    <li><a class="waves-effect waves-light btn">Logout</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="sass.html">Profile</a></li>
-                    <li><a href="badges.html">Groups</a></li>
-                    <li><a href="collapsible.html">Events</a></li>
-                    <li><a href="mobile.html">Issues</a></li>
-                    <li><a class="waves-effect waves-light btn">Logout</a></li>
-                </ul>
+                <div class="col s12">
+                    <a href="#!" class="breadcrumb">Patron</a>
+                    <a href="#!" class="breadcrumb">My Groups</a>
+                </div>
             </div>
+
         </nav>
+
+        <div id="page_title">
+            <h4>Groups</h4>
+        </div>
 
         <div class="formContainer card">
             <form class="col s12 l12 m6">
 
-                <ul class="collection with-header">
-                    <li class="collection-header">
-                        <h4>Groups</h4></li>
-                    <a href="#!" class="collection-item">Group 1<span class="new badge blue" data-badge-caption="new"></span></a>
-                    <a href="#!" class="collection-item">Group 2</a>
-                    <a href="#!" class="collection-item">Group 3<span class="new badge red" data-badge-caption="frequent"></span></a>
-                    <a href="#!" class="collection-item">Group 4</a>
+                <table class="highlight responsive-table">
+                    <thead>
+                        <tr>
+                            <th data-field="id">Group Name</th>
+                            <th data-field="name">Last Issue</th>
+                            <th data-field="price">Last Event</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Group 1</td>
+                            <td>Issue 17</td>
+                            <td>Event 23</td>
+                        </tr>
+                        <tr>
+                            <td>Group 2</td>
+                            <td>Issue 8</td>
+                            <td>Event 12</td>
+                        </tr>
+                        <tr>
+                            <td>Group 3</td>
+                            <td>Issue 21</td>
+                            <td>Event 41</td>
+                        </tr>
+                    </tbody>
+                </table>
 
             </form>
         </div>
