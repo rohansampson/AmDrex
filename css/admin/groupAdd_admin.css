@@ -32,18 +32,16 @@ h4{
   padding: 5%;
 }
 .button1{
-   margin-top: -30px;
+   margin-top: 5px;
   margin-right: 20%;
   float: right;
 
     }
 .button2{
-   margin-top: -30px;
-  margin-right: 1%;
-  float: right;
-
+   margin-top: 5px;
     }
 
 .submitButton{
   margin-left: 0.75em;
 }
+
