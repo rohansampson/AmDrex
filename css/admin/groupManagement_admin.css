@@ -1,0 +1,53 @@
+
+.main{
+  padding-left: 5%;
+}
+@media only screen and (max-width : 992px) {
+
+  .mainContainer{
+    width: 100%;
+    margin-left:0;
+  }
+}
+
+@media only screen and (min-width: 993px){
+  .mainContainer{
+    width: 80%;
+    margin-left: 20%;
+  }
+}
+
+.sidenav{
+  width: 20%;
+}
+
+.formContainer{
+  width: 50%;
+  margin: 5% auto 0 auto;
+  padding: 5%;
+}
+
+.submitButton{
+  margin-left: 0.75em;
+}
+
+
+.input-field{
+	width: 70%;
+	margin: auto;
+}
+
+#page_title{
+  padding-left: 5%;
+  margin-top: 3%;
+
+}
+
+.breadcrumb{
+  padding-left: 1%
+}
+
+#fab_add{
+  margin-right: 14%;
+  margin-top: 1%;
+}

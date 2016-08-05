@@ -1,18 +1,10 @@
 
 .breadcrumb{
-	padding-left: 1%
+  padding-left: 1%
 }
 h4{
-	padding-left: 5%;
-  margin-top: 3%;
-}
-.fab_add{
-	float:right;
-	margin-top:1%;
-	margin-right:27%;
-}
-.main{
   padding-left: 5%;
+  margin-top: 3%;
 }
 
 @media only screen and (max-width : 992px) {
@@ -30,7 +22,7 @@ h4{
   }
 }
 
-.sidenav{
+.side-nav{
   width: 20%;
 }
 
@@ -39,6 +31,18 @@ h4{
   margin: 5% auto 0 auto;
   padding: 5%;
 }
+.button1{
+   margin-top: -30px;
+  margin-right: 20%;
+  float: right;
+
+    }
+.button2{
+   margin-top: -30px;
+  margin-right: 1%;
+  float: right;
+
+    }
 
 .submitButton{
   margin-left: 0.75em;
