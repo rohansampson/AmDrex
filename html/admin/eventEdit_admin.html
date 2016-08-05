@@ -16,7 +16,6 @@
     <script type="text/javascript" src="../../js/materialize.min.js"></script>
 
 
-
     <ul id="nav-mobile" class="side-nav fixed sideNav">
         <br>
         <br>
@@ -59,11 +58,11 @@
         </div>
 
         <div class="formContainer card">
-            <form class="col s12 l12 m6">
+            <form class="col s12 l12 m6" action="update.php" method="post">
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="name" type="text" class="validate">
+                        <input id="name" type="text" class="validate" name="aname">
                         <label for="name">Name</label>
                     </div>
                 </div>
@@ -71,26 +70,26 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">today</i>
-                        <input id="start_date" placeholder="Pick a date" type="date" class="datepicker">
+                        <input id="start_date" placeholder="Pick a date" type="date" class="datepicker" name="startdate">
                         <label for="start_date">Start Date</label>
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">today</i>
-                        <input id="end_date" placeholder="Pick a date" type="date" class="datepicker">
+                        <input id="end_date" placeholder="Pick a date" type="date" class="datepicker" name="enddate">
                         <label for="end_date">End Date</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="street" type="text" class="validate">
+                        <input id="street" type="text" class="validate" name="street">
                         <label for="street">Street</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s4">
-                        <input id="city" type="text" class="validate">
+                        <input id="city" type="text" class="validate" name="city">
                         <label for="city">City</label>
                     </div>
                     <div class="input-field col s4">
@@ -157,7 +156,7 @@
                         <label>State</label>
                     </div>
                     <div class="input-field col s4">
-                        <input id="zip" type="text" class="validate">
+                        <input id="zip" type="text" class="validate" name="zip">
                         <label for="zip">Zip</label>
                     </div>
 
