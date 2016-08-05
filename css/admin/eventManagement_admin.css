@@ -2,6 +2,18 @@
 .main{
   padding-left: 5%;
 }
+.breadcrumb{
+  padding-left: 2%;
+}
+#page_title{
+  padding-left: 5%;
+  margin-top: 3%;
+}
+  #fab_add{
+  float:right;
+  margin-right: 16%;
+  margin-top: 1%;
+}
 
 @media only screen and (max-width : 992px) {
 
@@ -22,23 +34,9 @@
   width: 20%;
 }
 
-.dashboardHeader{
-  padding-right: 5%;
-}
 .formContainer{
-  width: 50%;
+  width: 70%;
   margin: 5% auto 0 auto;
   padding: 5%;
 }
 
-.customCard{
-  width: 30%;
-}
-
-#fab_add{
-  padding: 5%;
-}
-
-#page_title{
-  padding: 5%;
-}
