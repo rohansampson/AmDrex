@@ -1,3 +1,4 @@
+
 <html>
 
 <head>
@@ -6,7 +7,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="../../css/register.css" />
-    <link type="text/css" rel="stylesheet" href="../../css/patron_home.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/opsteam/issueManagement_opsteam.css" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -48,7 +49,10 @@
 
         <div class="formContainer card">
             <form class="col s12 l12 m6">
-
+                <form id=search>
+<input type="text" size="30" onkeyup="showResult(this.value)">
+<div id="livesearch"></div>
+</form>
                 <table class="highlight responsive-table">
                     <thead>
                         <tr>
@@ -96,6 +100,28 @@
         $(document).ready(function() {
             $('select').material_select();
         });
+        $function showResult(str) {
+  if (str.length==0) { 
+    document.getElementById("livesearch").innerHTML="";
+    document.getElementById("livesearch").style.border="0px";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      document.getElementById("livesearch").innerHTML=xmlhttp.responseText;
+      document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+    }
+  }
+  xmlhttp.open("GET","livesearch.php?q="+str,true);
+  xmlhttp.send();
+}
+
     </script>
 </body>
 
