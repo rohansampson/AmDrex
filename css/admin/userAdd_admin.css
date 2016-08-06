@@ -1,0 +1,69 @@
+
+.main{
+  padding-left: 5%;
+}
+h4{
+  padding-top: 2%;
+}
+
+@media only screen and (max-width : 992px) {
+
+  .mainContainer{
+    width: 100%;
+    margin-left:0;
+  }
+}
+
+@media only screen and (min-width: 993px){
+  .mainContainer{
+    width: 80%;
+    margin-left: 20%;
+  }
+}
+
+.sidenav{
+  width: 20%;
+}
+
+.dashboardHeader{
+  padding-right: 5%;
+}
+.formContainer{
+  width: 70%;
+  margin: 5% auto 0 auto;
+  padding: 5%;
+}
+
+.submitButton{
+  margin-left: 0.75em;
+}
+
+.bodyContainer{
+	display: flex;
+	width: 60%;
+	margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 10%;
+	min-width: 30%;
+}
+
+.input-field{
+	width: 70%;
+	margin: auto;
+}
+
+#page_title{
+  padding-left: 5%;
+}
+
+.breadcrumb{
+  padding-left: 1%
+}
+
+#fab_close{
+  float:right;
+  margin-right: 15%;
+  margin-top: 1%;
+}

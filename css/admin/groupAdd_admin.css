@@ -1,6 +1,10 @@
 
-.main{
+.breadcrumb{
+  padding-left: 1%
+}
+h4{
   padding-left: 5%;
+  margin-top: 3%;
 }
 
 @media only screen and (max-width : 992px) {
@@ -18,7 +22,7 @@
   }
 }
 
-.sidenav{
+.side-nav{
   width: 20%;
 }
 
@@ -27,16 +31,17 @@
   margin: 5% auto 0 auto;
   padding: 5%;
 }
+.button1{
+   margin-top: 5px;
+  margin-right: 20%;
+  float: right;
+
+    }
+.button2{
+   margin-top: 5px;
+    }
 
 .submitButton{
   margin-left: 0.75em;
-}
-
-#page_title{
-  padding-left: 5%;
-}
-
-.breadcrumb{
-  padding-left: 1%
 }
 

@@ -2,6 +2,18 @@
 .main{
   padding-left: 5%;
 }
+.breadcrumb{
+  padding-left: 2%;
+}
+#page_title{
+  padding-left: 5%;
+  margin-top: 3%;
+}
+  #fab_close{
+  float:right;
+  margin-right: 16%;
+  margin-top: 1%;
+}
 
 @media only screen and (max-width : 992px) {
 
@@ -22,9 +34,6 @@
   width: 20%;
 }
 
-.dashboardHeader{
-  padding-right: 5%;
-}
 .formContainer{
   width: 50%;
   margin: 5% auto 0 auto;

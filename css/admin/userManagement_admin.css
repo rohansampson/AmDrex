@@ -1,4 +1,16 @@
 
+.breadcrumb{
+	padding-left: 1%
+}
+h4{
+	padding-left: 5%;
+  margin-top: 3%;
+}
+.fab_add{
+	float:right;
+	margin-top:1%;
+	margin-right:27%;
+}
 .main{
   padding-left: 5%;
 }
@@ -22,9 +34,6 @@
   width: 20%;
 }
 
-.dashboardHeader{
-  padding-right: 5%;
-}
 .formContainer{
   width: 50%;
   margin: 5% auto 0 auto;
