@@ -75,7 +75,7 @@
         </div>
 
         <div class="formContainer card">
-            <form class="col s12 l12 m6">
+            <form class="col s12 l12 m6" name="eventAdd" action="" onsubmit="return validateForm()" method="post">
 
                 <div class="row">
                     <div class="input-field col s12">
@@ -110,7 +110,7 @@
                         <label for="city">City</label>
                     </div>
                     <div class="input-field col s4">
-                        <select>
+                        <select id="state">
                             <option value="" disabled selected>State</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
@@ -238,6 +238,65 @@
 
 
         });
+    </script>
+
+    <script>
+        function validateForm() {
+
+            var name = document.forms["eventAdd"]["name"].value;
+            if (name == null || name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            var start_date = document.forms["eventAdd"]["start_date"].value;
+            if (start_date == null || start_date == "") {
+                alert("Start Date must be filled out");
+                return false;
+            }
+
+            var end_date = document.forms["eventAdd"]["end_date"].value;
+            if (end_date == null || end_date == "") {
+                alert("End Date must be filled out");
+                    return false;
+            }
+
+            var street = document.forms["eventAdd"]["street"].value;
+            if (street == null || street == "") {
+                alert("Street must be filled out");
+                return false;
+            }
+
+            var city = document.forms["eventAdd"]["city"].value;
+            if (city == null || city == "") {
+                alert("City must be filled out");
+                return false;
+            }
+
+            var zip = document.forms["eventAdd"]["zip"].value;
+            if (zip == null || zip == "") {
+                alert("Zip must be filled out");
+                return false;
+            }
+
+            var state = document.forms["eventAdd"]["state"].value;
+            if (state == null || state == "") {
+                alert("State must be filled out");
+                return false;
+            }
+
+            var users = document.forms["eventAdd"]["users"].value;
+            if (users == null || users == "") {
+                alert("Users must be filled out");
+                return false;
+            }
+
+            var groups = document.forms["eventAdd"]["groups"].value;
+            if (groups == null || groups == "") {
+                alert("Groups must be filled out");
+                return false;
+            }
+        }
     </script>
 </body>
 

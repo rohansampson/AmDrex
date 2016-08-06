@@ -36,12 +36,12 @@
                 <div class="col s12">
                     <a href="#!" class="breadcrumb">Admin</a>
                     <a href="#!" class="breadcrumb">Group Management</a>
-                            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="sass.html">Home</a></li>
                         <li><a class="waves-effect waves-light btn">Logout</a></li>
                     </ul>
-            
+
                 </div>
             </div>
 
@@ -60,7 +60,7 @@
         </div>
 
         <div class="formContainer card">
-            <form class="col s12 l12 m6">
+            <form class="col s12 l12 m6" name="groupAdd" action="" onsubmit="return validateForm()" method="post">
 
                 <div class="row">
                     <div class="input-field col s12">
@@ -71,10 +71,10 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-				<input id="event" type="text" class="validate">
+                        <input id="event" type="text" class="validate">
                         <label for="event">Event</label>
                     </div>
-                               </div>
+                </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="users" type="text" class="validate">
@@ -82,50 +82,84 @@
                     </div>
 
 
-<form action="#">
-  <table>
-    <thead>
-      <tr>
-        <th>Permissions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>View</td>
-        <td><input type="checkbox" id="myCheckbox" class="filled-in" /><label  for="myCheckbox">
-         <td>Create</td>
-        <td><input type="checkbox" id="myCheckbox1" class="filled-in" /><label  for="myCheckbox1">
-        </label></td>
-         <td>Edit</td>
-        <td><input type="checkbox" id="myCheckbox2" class="filled-in" /><label  for="myCheckbox2">
-        </label></td>
-         <td>Delete</td>
-        <td><input type="checkbox" id="myCheckbox3" class="filled-in" /><label  for="myCheckbox3">
-        </label></td>
-        
-      </tr>
-    </tbody>
-  </table>
-</form>                    
-                <button class="btn waves-effect waves-light" type="submit" name="action">Save
-                    <i class="material-icons right">mode_edit</i>
-                </button>
+                    <form action="#">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Permissions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>View</td>
+                                    <td>
+                                        <input type="checkbox" id="myCheckbox" class="filled-in" />
+                                        <label for="myCheckbox">
+                                            <td>Create</td>
+                                            <td>
+                                                <input type="checkbox" id="myCheckbox1" class="filled-in" />
+                                                <label for="myCheckbox1">
+                                                </label>
+                                            </td>
+                                            <td>Edit</td>
+                                            <td>
+                                                <input type="checkbox" id="myCheckbox2" class="filled-in" />
+                                                <label for="myCheckbox2">
+                                                </label>
+                                            </td>
+                                            <td>Delete</td>
+                                            <td>
+                                                <input type="checkbox" id="myCheckbox3" class="filled-in" />
+                                                <label for="myCheckbox3">
+                                                </label>
+                                            </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Save
+                        <i class="material-icons right">mode_edit</i>
+                    </button>
 
             </form>
 
-        </div>
+            </div>
 
-        <!-- DELETE TILL HERE -->
-    </div>
-    <script>
-        $(document).ready(function() {
-            $('select').material_select();
-            $('.chips-placeholder').material_chip({
-                placeholder: 'Enter a tag',
-                secondaryPlaceholder: '+Tag',
+            <!-- DELETE TILL HERE -->
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('select').material_select();
+                $('.chips-placeholder').material_chip({
+                    placeholder: 'Enter a tag',
+                    secondaryPlaceholder: '+Tag',
+                });
             });
-        });
-    </script>
+        </script>
+
+        <script>
+            function validateForm() {
+
+                var name = document.forms["groupAdd"]["name"].value;
+                if (name == null || name == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+
+                var event = document.forms["groupAdd"]["event"].value;
+                if (event == null || event == "") {
+                    alert("Event must be filled out");
+                    return false;
+                }
+
+                var users = document.forms["groupAdd"]["users"].value;
+                if (users == null || users == "") {
+                    alert("Users must be filled out");
+                        return false;
+                    }
+            }
+        </script>
 </body>
 
 </html>

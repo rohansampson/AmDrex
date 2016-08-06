@@ -55,7 +55,7 @@
 
         <!-- DELETE THIS FOR ADMIN DASHBOARD -->
         <div class="formContainer card">
-            <form class="col s12 l12 m6">
+            <form class="col s12 l12 m6" name="issueSubmit" action="" onsubmit="return validateForm()" method="post">
                 <div class="row">
                     <div class="input-field col s12 l12 m6">
                         <input id="issueTitle" type="text" class="validate">
@@ -72,12 +72,19 @@
 
                 <div class="row">
                     <div class="input-field col s12 l12 m6">
-                        <input id="issueLabel" type="text" class="validate">
-                        <label for="issueLabel" data-error="wrong" data-success="right">Issue Label</label>
+                        <select id="label">
+                            <option value="" disabled selected>Select a label</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Issue Label</label>
                     </div>
                 </div>
 
-                <a class="waves-effect waves-light btn submitButton">Submit</a>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
             </form>
         </div>
 
@@ -87,6 +94,29 @@
         $(document).ready(function() {
             $('select').material_select();
         });
+    </script>
+
+    <script>
+        function validateForm() {
+
+            var issueTitle = document.forms["issueSubmit"]["issueTitle"].value;
+            if (issueTitle == null || issueTitle == "") {
+                alert("Issue Title must be filled out");
+                return false;
+            }
+
+            var issueDetail = document.forms["issueSubmit"]["issueDetail"].value;
+            if (issueDetail == null || issueDetail == "") {
+                alert("Issue Detail must be filled out");
+                return false;
+            }
+
+            var label = document.forms["issueSubmit"]["label"].value;
+            if (label == null || label == "") {
+                alert("Label must be filled out");
+                return false;
+            }
+        }
     </script>
 </body>
 
