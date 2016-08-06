@@ -1,0 +1,58 @@
+
+.main{
+  padding-left: 5%;
+}
+#page_title{
+  padding-left: 5%;
+}
+
+.breadcrumb{
+  padding-left: 1%
+}
+
+@media screen and (min-width: 993px){
+
+	.main{
+		width: 80%;
+		margin-left: 20%;
+	}
+
+.side-nav{
+		width: 20%;
+		min-width: 100px;
+	}
+
+	.main > ul{
+		margin-top: 20px;
+	}
+.card{
+		width: 70%;
+
+
+	}
+}
+
+@media only screen and (max-width : 992px) {
+
+  .mainContainer{
+    width: 100%;
+    margin-left:0;
+  }
+}
+
+@media only screen and (min-width: 993px){
+  .mainContainer{
+    width: 80%;
+    margin-left: 20%;
+  }
+}
+
+.sidenav{
+  width: 20%;
+}
+
+.formContainer{
+  width: 50%;
+  margin: 5% auto 0 auto;
+  padding: 5%;
+}

@@ -1,0 +1,125 @@
+/* .formContainer{
+  width: 50%;
+  margin: 5% auto 0 auto;
+  padding: 5%;
+}
+
+  @media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  .main{
+    width: 80%;
+    margin-left: 20%;
+  }
+
+    /* Force table to not be like tables anymore 
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) 
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr { border: 1px solid #ccc; }
+
+    td {
+      /* Behave  like a "row" 
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+    }
+
+    td:before {
+      /* Now like a table header 
+      position: absolute;
+      /* Top/left values mimic padding 
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+
+}
+  /* Smartphones (portrait and landscape) ----------- 
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+      .main{
+    width: 80%;
+    margin-left: 20%;
+  }
+
+    body {
+      padding: 0;
+      margin: 0;
+      width: 320px; }
+    }
+
+*/
+.main{
+  padding-left: 5%;
+}
+
+.breadcrumb{
+  padding-left: 1%
+}
+
+#search{
+  width: 50;
+  float: right;
+  margin-top: 0px;
+  margin-right: 20%;
+}
+@media screen and (min-width: 993px){
+
+	.main{
+		width: 80%;
+		margin-left: 20%;
+	}
+
+.side-nav{
+		width: 20%;
+		min-width: 100px;
+	}
+
+	.main > ul{
+		margin-top: 20px;
+	}
+.card{
+		width: 70%;
+
+
+	}
+}
+
+@media only screen and (max-width : 992px) {
+
+  .mainContainer{
+    width: 100%;
+    margin-left:0;
+  }
+}
+
+@media only screen and (min-width: 993px){
+  .mainContainer{
+    width: 80%;
+    margin-left: 20%;
+  }
+}
+
+.sidenav{
+  width: 20%;
+}
+
+.formContainer{
+  width: 50%;
+  margin: 5% auto 0 auto;
+  padding: 5%;
+}
+
+
