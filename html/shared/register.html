@@ -19,7 +19,7 @@
 
       <img src = "../../media/logo26.png" class = "circle" id = "logo" align="right"/>
 
-      <form id = "loginForm" class = "card">
+      <form id = "loginForm" class = "card" action="register.php" method="post">
 
           <div class = "row">
 
@@ -29,26 +29,26 @@
             </div>
 
             <div class="input-field col l12 s12">
-              <input id="email" type="text" class="validate">
+              <input id="email" type="text" class="validate" name="emailField">
               <label for="email">Email</label>
             </div>
 
             <div class="input-field col l12 s12">
-              <input id="username" type="text" class="validate">
+              <input id="username" type="text" class="validate" name="nameField">
               <label for="username">Username</label>
             </div>
           </div>
 
           <div class = "row">
             <div class="input-field col l12 s12">
-              <input id="password" type="password" class="validate">
+              <input id="password" type="password" class="validate"  name="passwordField">
               <label for="password">Password</label>
             </div>
           </div>
 
           <div class = "row">
             <div class="input-field col l12 s12">
-              <input id="repassword" type="password" class="validate">
+              <input id="repassword" type="password" class="validate" name="repeatPassword">
               <label for="repassword">Re-Enter Password</label>
             </div>
           </div>
