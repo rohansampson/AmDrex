@@ -40,7 +40,7 @@
                         <li><a href="sass.html">Home</a></li>
                         <li><a class="waves-effect waves-light btn">Logout</a></li>
                     </ul>
-            
+
                 </div>
             </div>
 
@@ -59,7 +59,7 @@
         </div>
 
         <div class="formContainer card">
-            <form class="col s12 l12 m6">
+            <form class="col s12 l12 m6" name="groupEdit" action="" onsubmit="return validateForm()" method="post">
 
                 <div class="row">
                     <div class="input-field col s12">
@@ -125,6 +125,30 @@
             });
         });
     </script>
+
+    <script>
+            function validateForm() {
+
+                var name = document.forms["groupEdit"]["name"].value;
+                if (name == null || name == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+
+                var event = document.forms["groupEdit"]["event"].value;
+                if (event == null || event == "") {
+                    alert("Event must be filled out");
+                    return false;
+                }
+
+                var users = document.forms["groupEdit"]["users"].value;
+                if (users == null || users == "") {
+                    alert("Users must be filled out");
+                        return false;
+                    }
+            }
+        </script>
+
 </body>
 
 </html>

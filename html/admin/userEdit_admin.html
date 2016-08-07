@@ -61,7 +61,7 @@
 
 
         <div class="formContainer card">
-            <form class="col s12 l12 m6">
+            <form class="col s12 l12 m6"  name="userEdit" action="" onsubmit="return validateForm()" method="post">
 
                 <div class="row">
                     <div class="input-field col s6">
@@ -232,6 +232,38 @@
             selectYears: 15 // Creates a dropdown of 15 years to control year
         });
     </script>
+
+
+        <script>
+            function validateForm() {
+
+                var name = document.forms["userEdit"]["name"].value;
+                if (name == null || name == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+
+                var email = document.forms["userEdit"]["email"].value;
+                if (email == null || email == "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+
+                var events = document.forms["userEdit"]["events"].value;
+                if (events == null || events == "") {
+                    alert("Events must be filled out");
+                        return false;
+                }
+
+                var groups = document.forms["userEdit"]["groups"].value;
+                if (groups == null || groups == "") {
+                    alert("Groups must be filled out");
+                    return false;
+                }
+
+            }
+        </script>
+
 </body>
 
 </html>

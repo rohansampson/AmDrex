@@ -58,7 +58,7 @@
         </div>
 
         <div class="formContainer card">
-            <form class="col s12 l12 m6" action="update.php" method="post">
+            <form class="col s12 l12 m6" action="update.php" method="post" name="eventEdit" onsubmit="return validateForm()">
 
                 <div class="row">
                     <div class="input-field col s12">
@@ -225,6 +225,67 @@
 
         });
     </script>
+
+
+        <script>
+            function validateForm() {
+
+                var name = document.forms["eventEdit"]["name"].value;
+                if (name == null || name == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+
+                var start_date = document.forms["eventEdit"]["start_date"].value;
+                if (start_date == null || start_date == "") {
+                    alert("Start Date must be filled out");
+                    return false;
+                }
+
+                var end_date = document.forms["eventEdit"]["end_date"].value;
+                if (end_date == null || end_date == "") {
+                    alert("End Date must be filled out");
+                        return false;
+                }
+
+                var street = document.forms["eventEdit"]["street"].value;
+                if (street == null || street == "") {
+                    alert("Street must be filled out");
+                    return false;
+                }
+
+                var city = document.forms["eventEdit"]["city"].value;
+                if (city == null || city == "") {
+                    alert("City must be filled out");
+                    return false;
+                }
+
+                var zip = document.forms["eventEdit"]["zip"].value;
+                if (zip == null || zip == "") {
+                    alert("Zip must be filled out");
+                    return false;
+                }
+
+                var state = document.forms["eventEdit"]["state"].value;
+                if (state == null || state == "") {
+                    alert("State must be filled out");
+                    return false;
+                }
+
+                var users = document.forms["eventEdit"]["users"].value;
+                if (users == null || users == "") {
+                    alert("Users must be filled out");
+                    return false;
+                }
+
+                var groups = document.forms["eventEdit"]["groups"].value;
+                if (groups == null || groups == "") {
+                    alert("Groups must be filled out");
+                    return false;
+                }
+            }
+        </script>
+
 </body>
 
 </html>
