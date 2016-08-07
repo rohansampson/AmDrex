@@ -4,8 +4,8 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="../../css/ajaxlivesearch.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="../../css/admin/groupEdit_admin.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/ajaxlivesearch.min.css" />
     <link type="text/css" rel="stylesheet" href="../../css/admin/groupEdit_admin.css" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -126,6 +126,29 @@
                 secondaryPlaceholder: '+Tag',
             });
         });
+
+        $(".mySearch").ajaxlivesearch({
+        loaded_at: <?php echo $time; ?>,
+        token: <?php echo "'" . $token . "'"; ?>,
+        maxInput: <?php echo $maxInputLength; ?>,
+        onResultClick: function(e, data) {
+            // get the index 1 (second column) value
+            var selectedOne = jQuery(data.selected).find('td').eq('1').text();
+
+            // set the input value
+            jQuery('.mySearch').val(selectedOne);
+
+            // hide the result
+            jQuery(".mySearch").trigger('ajaxlivesearch:hide_result');
+        },
+        onResultEnter: function(e, data) {
+            // do whatever you want
+            // jQuery(".mySearch").trigger('ajaxlivesearch:search', {query: 'test'});
+        },
+        onAjaxComplete: function(e, data) {
+            // do whatever you want
+        }
+    });
     </script>
 
     <script>

@@ -2,7 +2,7 @@
 
 use AjaxLiveSearch\core\Handler;
 
-header('Access-Control-Allow-Origin: http://ajaxlivesearch.com');
+header('Access-Control-Allow-Origin: localhost');
 header('Access-Control-Allow-Methods: *');
 header('Content-Type: application/json');
 
