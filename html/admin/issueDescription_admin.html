@@ -1,0 +1,225 @@
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/register.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/admin_issueDescription.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="grey lighten-4">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+
+
+
+    <ul id="nav-mobile" class="side-nav fixed sideNav">
+        <br>
+        <br>
+        <li class="bold"><a href="profile_admin.php" class="waves-effect waves-teal">Profile</a></li>
+        <li class="bold"><a href="issueManagement_admin.php" class="waves-effect waves-teal">Issues</a></li>
+        <li class="bold"><a href="groupManagement_admin.php" class="waves-effect waves-teal">Groups</a></li>
+        <li class="bold"><a href="eventManagement_admin.php" class="waves-effect waves-teal">Events</a></li>
+    </ul>
+
+
+
+    <div class="mainContainer">
+        <nav class="indigo darken-2 topNavBar">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#!" class="breadcrumb">Admin</a>
+                    <a href="#!" class="breadcrumb">Issue Management</a>
+                    <a href="#!" class="breadcrumb">Issue Description</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Home</a></li>
+                        <li><a class="waves-effect waves-light btn">Logout</a></li>
+                    </ul>
+                </div>
+
+                <ul class="side-nav" id="mobile-demo">
+                    <li class="bold"><a href="profile_admin.php" class="waves-effect waves-teal">Profile</a></li>
+                    <li class="bold"><a href="issueManagement_admin.php" class="waves-effect waves-teal">Issues</a></li>
+                    <li class="bold"><a href="groupManagement_admin.php" class="waves-effect waves-teal">Groups</a></li>
+                    <li class="bold"><a href="eventManagement_admin.php" class="waves-effect waves-teal">Events</a></li>
+                    <li><a class="waves-effect waves-light btn">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- DELETE THIS FOR ADMIN DASHBOARD -->
+        <a class="btn-floating btn-large waves-effect waves-light lime right" id="fab1"><i class="material-icons">assignment_ind</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light pink right" id="fab2"><i class="material-icons">mode_edit</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light cyan right" id="fab3"><i class="material-icons">delete</i></a>
+
+
+        <div class="formContainer card">
+            <form class="col s12 l12 m6">
+
+                <h4 id="issueTitle">Issue Name</h4>
+
+                <div class="teal z-depth-1">
+                    <div class="row" id="tsStripe1">
+                        <div class="col s3">
+                            <h6><font color="white"><b>Created Timestamp</b></font></h6>
+                        </div>
+
+                        <div class="col s3">
+                            <h6><font color="white"><b>Last Updated Timestamp</b></font></h6>
+                        </div>
+
+                        <div class="col s3">
+                            <h6><font color="white"><b>First Response Timestamp</b></font></h6>
+                        </div>
+
+                        <div class="col s3">
+                            <h6><font color="white"><b>Completed Timestamp</b></font></h6>
+                        </div>
+                    </div>
+
+                    <div class="row" id="tsStripe2">
+                        <div class="col s3">
+                            <h6><font color="white">[timestamp]</font></h6>
+                        </div>
+
+                        <div class="col s3">
+                            <h6><font color="white">[timestamp]</font></h6>
+                        </div>
+
+                        <div class="col s3">
+                            <h6><font color="white">[timestamp]</font></h6>
+                        </div>
+
+                        <div class="col s3">
+                            <h6><font color="white">pending</font></font></h6>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="issueSummary">
+                     <div class="row">
+   	 <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Issue Summary</label>
+        </div>
+      </div>
+    </form>
+  </div>
+                    <div class="row">
+                        <div class="col s6">
+                            <b>Status : </b><font color="green">Status 1</font>
+                        </div>
+
+                        <div class="col s6">
+                            <!-- Dropdown Trigger -->
+                            <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Change</a>
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown1' class='dropdown-content'>
+                                <li><a href="#!">New</a></li>
+                                <li><a href="#!">Awaiting User Response</a></li>
+                                <li><a href="#!">Assigned</a></li>
+                                <li><a href="#!">In Progress</a></li>
+                                <li><a href="#!">Complete</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="teal z-depth-1">
+                    <div class="row" id="linkedUsers1">
+                        <div class="col s6">
+                            <h6><font color="white"><b>First Response User</b></font></h6>
+                        </div>
+                        <div class="col s6">
+                            <h6><font color="white"><b>Completed User</b></font></h6>
+                        </div>
+                    </div>
+
+                    <div class="row" id="linkedUsers2">
+                        <div class="col s6">
+                            <h6><font color="white">User 12</font></h6>
+                        </div>
+                        <div class="col s6">
+                            <h6><font color="white">User 42</font></h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="issueDescription">
+                     <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea2" class="materialize-textarea"></textarea>
+          <label for="textarea2">Description</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+                </div>
+
+                <div id="chipsLabel">
+                    <h5>Issue Label</h5>
+                <div class="chip cyan"><i class="close material-icons">close</i>
+<font color="white">Issue Label</font>
+  </div>
+                
+                    
+                </div>
+
+                <div id="chipsLocation">
+                    <h5>Location</h5>
+                    <div class="chip cyan"><i class="close material-icons">close</i>
+
+                        <font color="white">Location 1</font>
+                    </div>
+                    <div class="chip cyan"><i class="close material-icons">close</i>
+
+                        <font color="white">Location 2</font>
+                    </div>
+                    <div class="chip cyan"><i class="close material-icons">close</i>
+
+                        <font color="white">Location 3</font>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- DELETE TILL HERE -->
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+
+            $('.chips').material_chip();
+  $('.chips-initial').material_chip({
+    data: [{
+      tag: 'Issue Label',
+    }],
+  });
+  $('.chips-placeholder').material_chip({
+    placeholder: 'Enter a Issue Label',
+    secondaryPlaceholder: '+Issue',
+  });
+        });
+ var chip = {
+    tag: 'chip content',
+    image: '', //optional
+    id: 1, //optional
+  };
+    </script>
+</body>
+
+</html>
