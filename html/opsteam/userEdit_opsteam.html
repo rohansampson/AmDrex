@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../../css/register.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/patron_home.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="grey lighten-4">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+
+
+
+    <ul id="nav-mobile" class="side-nav fixed sideNav">
+        <br>
+        <br>
+        <li class="bold"><a href="http://localhost/MIS347/html/opsteam/profile_opsteam.php" class="waves-effect waves-teal">Profile</a></li>
+        <li class="bold"><a href="http://localhost/MIS347/html/opsteam/issueManagement_opsteam.php" class="waves-effect waves-teal">Issues</a></li>
+        <li class="bold"><a href="http://localhost/MIS347/html/opsteam/userManagement_opsteam.php" class="waves-effect waves-teal">Users</a></li>
+        <li class="bold"><a href="http://localhost/MIS347/html/opsteam/groupManagement_opsteam.php" class="waves-effect waves-teal">Groups</a></li>
+        <li class="bold"><a href="http://localhost/MIS347/html/opsteam/eventManagement_opsteam.php" class="waves-effect waves-teal">Events</a></li>
+    </ul>
+
+
+
+    <div class="mainContainer">
+        <nav class="indigo darken-2 topNavBar">
+
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#!" class="breadcrumb">Admin</a>
+                    <a href="#!" class="breadcrumb">User Management</a>
+                    <a href="#!" class="breadcrumb">Edit User</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                      <ul class="right hide-on-med-and-down">
+                        <li><a href="dashboard_opsteam.html">Home</a></li>
+                        <li><a class="waves-effect waves-light btn" href="../../php/logout.php">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+        <div id="page_title">
+            <h4>Users</h4>
+        </div>
+
+        <div id="fab_add">
+            <a class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">close</i></a>
+        </div>
+
+        <div class="formContainer card">
+            <form class="col s12 l12 m6">
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+                    </div>
+
+                    <div class="file-field input-field col s6">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Upload Picture">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="email" type="text" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <select>
+                            <option value="" disabled selected>Status</option>
+                            <option value="active">Active</option>
+                            <option value="suspended">Suspended</option>
+                        </select>
+                        <label>Status</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="events" type="text" class="validate">
+                        <label for="users">Events</label>
+                    </div>
+
+
+                    <div class="input-field col s6">
+                        <input id="groups" type="text" class="validate">
+                        <label for="groups">Groups</label>
+                    </div>
+                    
+                </div>
+
+                <div class="input-field col s12 l12 m6">
+                    <select id="label">
+                        <option value="" disabled selected>Account Category</option>
+                        <option value="1">Patron</option>
+                        <option value="2">Ops Team</option>
+                        <option value="3">Admin</option>
+                    </select>
+                    <label>User Account</label>
+                </div>
+
+                <div class="row">
+                    <button class="btn waves-effect waves-light right" type="submit" name="action">Save
+                        <i class="material-icons right">mode_edit</i>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- DELETE TILL HERE -->
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+    </script>
+</body>
+
+</html>

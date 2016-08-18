@@ -21,18 +21,16 @@
     <ul id="nav-mobile" class="side-nav fixed sideNav">
         <br>
         <br>
-        <li class="bold"><a href="about.html" class="waves-effect waves-teal">Profile</a></li>
-        <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Issues</a></li>
-        <li class="bold"><a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Groups</a></li>
-        <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">Events</a></li>
+        <li class="bold"><a href="profile_exp.php" class="waves-effect waves-teal">Profile</a></li>
+        <li class="bold"><a href="issues_patron.php" class="waves-effect waves-teal">Issues</a></li>
+        <li class="bold"><a href="groups_patron.php" class="waves-effect waves-teal">Groups</a></li>
+        <li class="bold"><a href="events_patron.php" class="waves-effect waves-teal">Events</a></li>
     </ul>
 
 
-
     <div class="mainContainer">
-        <nav class="indigo darken-2 topNavBar">
-
-            <div class="nav-wrapper">
+        <nav class="indigo darken-2 topNavBar>        
+           <div class="nav-wrapper">
                 <div class="col s12">
                     <a href="#!" class="breadcrumb">Patron</a>
                     <a href="#!" class="breadcrumb">My Groups</a>
@@ -58,21 +56,43 @@
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>Group 1</td>
-                            <td>Issue 17</td>
-                            <td>Event 23</td>
-                        </tr>
-                        <tr>
-                            <td>Group 2</td>
-                            <td>Issue 8</td>
-                            <td>Event 12</td>
-                        </tr>
-                        <tr>
-                            <td>Group 3</td>
-                            <td>Issue 21</td>
-                            <td>Event 41</td>
-                        </tr>
+                        <?php
+
+                        $conn = new mysqli('localhost','ske','ske','skecomplaints');
+                        if(! $conn)
+                        {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
+							session_start();
+							$User_ID= $_SESSION["sessionUserID"];
+                            $sql = "SELECT * FROM groups WHERE User_ID = ".$User_ID." ";
+                            $result = $conn->query($sql);
+                            // output data of each row
+                            while($row = $result->fetch_assoc()){
+                                //Creates a loop to loop through results
+                                $Group_ID = $row["Group_ID"];
+                                $Group_Name = $row["Group_Name"];
+                                $Event_ID = $row["Event_ID"];
+
+                                echo '
+                                <tr id="E'.$Group_ID.'">
+                                <form  id="groupEdit" action = "../../php/groupEdit.php" method = "post">
+                                    <input name="Egroupid" type = "hidden" value = "'.$Group_ID.'" />
+                                </form>
+                                <tr id="D'.$Group_ID.'">
+                               <form  id="groupDelete" action = "../../php/groupDelete.php" method = "post">
+                                    <input name="Dgroupid" type = "hidden" value = "'.$Group_ID.'" />
+                                </form>
+                                    <td>'.$Group_Name.'</a></td>
+                                    <td>'.$Event_ID.'</td>
+                                    <td>'.$User_ID.'</td>
+                                    </td>
+                                </tr>
+                                '; // echo end
+
+                            }
+
+                        ?>
                     </tbody>
                 </table>
 
@@ -81,6 +101,40 @@
 
         <!-- DELETE TILL HERE -->
     </div>
+    <div id="deleteIssueModal" class="modal deleteModal">
+       <div class="modal-content">
+         <h4>Delete Group</h4>
+       </div>
+       <div class="modal-footer">
+         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id = "deleteIssueConfirmButton">Confirm</a>
+         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat cancelButton">Cancel</a>
+       </div>
+     </div>
+	<div id="editIssueModal" class="modal editModal">
+       <div class="modal-content">
+         <h4>Edit Group</h4>
+       </div>
+       <div class="modal-footer">
+         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id = "editIssueConfirmButton">Confirm</a>
+         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat cancelButton">Cancel</a>
+       </div>
+     </div>
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+			$('.modal-trigger').leanModal();
+        });
+    </script>
+	<script>
+        $("#deleteIssueConfirmButton").click(function(){
+            $("#groupDelete").submit();
+        });
+    </script>
+    <script>
+        $("#editIssueConfirmButton").click(function(){
+            $("#groupEdit").submit();
+        });
+    </script>
     <script>
         $(document).ready(function() {
             $('select').material_select();

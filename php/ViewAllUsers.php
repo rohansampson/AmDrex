@@ -1,8 +1,8 @@
 <?php
 define('DB_NAME', 'skecomplaints');
-define('DB_USER', '');
-define('DB_PASSWORD', '');
-define('DB_HOST', '');
+define('DB_USER', 'ske');
+define('DB_PASSWORD', 'ske');
+define('DB_HOST', 'localhost');
 
 $conn = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 if(! $conn)
@@ -17,7 +17,7 @@ $db_selected = mysql_select_db(DB_NAME, $conn);
 	{
 		die('Cannot use ' . DB_NAME . ': ' . mysql_error());
 	}
-	
+
 	$sql = "SELECT User_ID, Username, Email FROM user";
 	$result = mysql_query($sql,$conn);
 	if (mysql_num_rows($result) > 0) {

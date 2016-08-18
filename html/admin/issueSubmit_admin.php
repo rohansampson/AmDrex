@@ -1,3 +1,16 @@
+<!-- <?php
+define('DB_USER', 'ske');
+define('DB_PASSWORD', 'ske');
+define('DB_HOST', 'localhost');
+    $conn = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,'skecomplaints'); // $config['username'], $config['password'],
+    // Check connection
+       if ($conn->connect_error) {
+           die("Connection failed: " . $conn->connect_error);
+       }
+	session_start();
+	$_SESSION['check']= 0;
+?> -->
+
 <html>
 
 <head>
@@ -21,10 +34,11 @@
     <ul id="nav-mobile" class="side-nav fixed sideNav">
         <br>
         <br>
-        <li class="bold"><a href="about.html" class="waves-effect waves-teal">Profile</a></li>
-        <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Issues</a></li>
-        <li class="bold"><a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Groups</a></li>
-        <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">Events</a></li>
+        <li class="bold"><a href="http://localhost/MIS347/html/admin/profile_admin.php" class="waves-effect waves-teal">Profile</a></li>
+        <li class="bold"><a href="http://localhost/MIS347/html/admin/issueManagement_admin.php" class="waves-effect waves-teal">Issues</a></li>
+        <li class="bold"><a href="http://localhost/MIS347/html/admin/userManagement_admin.php" class="waves-effect waves-teal">Users</a></li>
+        <li class="bold"><a href="http://localhost/MIS347/html/admin/groupManagement_admin.php" class="waves-effect waves-teal">Groups</a></li>
+        <li class="bold"><a href="http://localhost/MIS347/html/admin/eventManagement_admin.php" class="waves-effect waves-teal">Events</a></li>
     </ul>
 
 
@@ -38,34 +52,36 @@
                     <a href="#!" class="breadcrumb">Issue Submission</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="sass.html">Home</a></li>
+                        <li><a href="dashboard_admin.html">Home</a></li>
                         <li><a class="waves-effect waves-light btn">Logout</a></li>
                     </ul>
                 </div>
 
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="sass.html">Profile</a></li>
-                    <li><a href="badges.html">Groups</a></li>
-                    <li><a href="collapsible.html">Events</a></li>
-                    <li><a href="mobile.html">Issues</a></li>
-                    <li><a class="waves-effect waves-light btn">Logout</a></li>
+                    <li><a href="http://localhost/MIS347/html/admin/profile_admin.php">Profile</a></li>
+                    <li><a href="http://localhost/MIS347/html/admin/groupManagement_admin.php">Groups</a></li>
+                    <li><a href="http://localhost/MIS347/html/admin/eventManagement_admin.php">Events</a></li>
+                    <li><a href="http://localhost/MIS347/html/admin/issueManagement_admin.php">Issues</a></li>
+                    <li><a class="waves-effect waves-light btn" href="../../php/logout.php">Logout</a></li>
                 </ul>
             </div>
         </nav>
 
         <!-- DELETE THIS FOR ADMIN DASHBOARD -->
         <div class="formContainer card">
-            <form class="col s12 l12 m6" name="issueSubmit" action="" onsubmit="return validateForm()" method="post">
+
+            <form class="col s12 l12 m6" name="issueSubmit" action="../../php/issueAdd.php" onsubmit="return validateForm()" method="post">
+
                 <div class="row">
                     <div class="input-field col s12 l12 m6">
-                        <input id="issueTitle" type="text" class="validate">
+                        <input id="issueTitle" type="text" class="validate" name="issueT">
                         <label for="issueTitle" data-error="wrong" data-success="right">Issue Title</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s12 l12 m6">
-                        <input id="issueDetail" type="text" class="validate">
+                        <input id="issueDetail" type="text" class="validate" name="issueD">
                         <label for="issueDetail" data-error="wrong" data-success="right">Issue Details</label>
                     </div>
                 </div>
@@ -74,9 +90,10 @@
                     <div class="input-field col s12 l12 m6">
                         <select id="label">
                             <option value="" disabled selected>Select a label</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
+                            <option value="1">Maintenance</option>
+                            <option value="2">Fire</option>
+                            <option value="3">Spill</option>
+                            <option value="4">Medical</option>
                         </select>
                         <label>Issue Label</label>
                     </div>

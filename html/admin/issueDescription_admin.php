@@ -1,3 +1,35 @@
+<?php
+define('DB_USER', 'ske');
+define('DB_PASSWORD', 'ske');
+define('DB_HOST', 'localhost');
+    $conn = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,'skecomplaints'); // $config['username'], $config['password'],
+    // Check connection
+       if ($conn->connect_error) {
+           die("Connection failed: " . $conn->connect_error);
+       }
+
+	session_start();
+	$Issues_ID = $_GET["id"];
+    $sql = "SELECT Created_Timestamp, Last_Update_Timestamp, First_Response_Timestamp, Completed_Timestamp, Summary, Status,
+	First_Response_User, Completed_Timestamp, Description, Label, Location
+	FROM issues WHERE Issues_ID= ".$Issues_ID." ";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+    $Summary= $row["Summary"];
+    $Status= $row["Status"];
+	$Created_Timestamp= $row["Created_Timestamp"];
+	$Last_Update_Timestamp= $row["Last_Update_Timestamp"];
+	$First_Response_Timestamp= $row["First_Response_Timestamp"];
+	$Completed_Timestamp= $row["Completed_Timestamp"];
+	$First_Response_User= $row["First_Response_User"];
+	$Completed_Timestamp= $row["Completed_Timestamp"];
+	$Description= $row["Description"];
+	$Label= $row["Label"];
+	$Location= $row["Location"];
+    break;
+  }
+?>
+
 <html>
 
 <head>
@@ -21,10 +53,10 @@
     <ul id="nav-mobile" class="side-nav fixed sideNav">
         <br>
         <br>
-        <li class="bold"><a href="about.html" class="waves-effect waves-teal">Profile</a></li>
-        <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Issues</a></li>
-        <li class="bold"><a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Groups</a></li>
-        <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">Events</a></li>
+        <li class="bold"><a href="profile_admin.php" class="waves-effect waves-teal">Profile</a></li>
+        <li class="bold"><a href="issueManagement_admin.php" class="waves-effect waves-teal">Issues</a></li>
+        <li class="bold"><a href="groupManagement_admin.php" class="waves-effect waves-teal">Groups</a></li>
+        <li class="bold"><a href="eventManagement_admin.php" class="waves-effect waves-teal">Events</a></li>
     </ul>
 
 
@@ -39,30 +71,32 @@
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="sass.html">Home</a></li>
-                        <li><a class="waves-effect waves-light btn">Logout</a></li>
+                        <li><a class="waves-effect waves-light btn" href="../../php/logout.php">Logout</a></li>
                     </ul>
                 </div>
 
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="sass.html">Profile</a></li>
-                    <li><a href="badges.html">Groups</a></li>
-                    <li><a href="collapsible.html">Events</a></li>
-                    <li><a href="mobile.html">Issues</a></li>
+                    <li class="bold"><a href="profile_admin.php" class="waves-effect waves-teal">Profile</a></li>
+                    <li class="bold"><a href="issueManagement_admin.php" class="waves-effect waves-teal">Issues</a></li>
+                    <li class="bold"><a href="groupManagement_admin.php" class="waves-effect waves-teal">Groups</a></li>
+                    <li class="bold"><a href="eventManagement_admin.php" class="waves-effect waves-teal">Events</a></li>
                     <li><a class="waves-effect waves-light btn">Logout</a></li>
                 </ul>
             </div>
         </nav>
 
-        <!-- DELETE THIS FOR ADMIN DASHBOARD -->
-        <a class="btn-floating btn-large waves-effect waves-light lime right" id="fab1"><i class="material-icons">assignment_ind</i></a>
-        <a class="btn-floating btn-large waves-effect waves-light pink right" id="fab2"><i class="material-icons">mode_edit</i></a>
-        <a class="btn-floating btn-large waves-effect waves-light cyan right" id="fab3"><i class="material-icons">delete</i></a>
 
+        <a class="btn-floating btn-large waves-effect waves-light lime right" id="fab1"><i class="material-icons">assignment_ind</i></a>
 
         <div class="formContainer card">
+
+          <form  id="issueAssignf" action = "issueAssign_admin.php" method = "post">
+              <input name="issueid" type = "hidden" value = <?php echo $Issues_ID; ?> />
+          </form>
+
             <form class="col s12 l12 m6">
 
-                <h4 id="issueTitle">Issue Name</h4>
+                <h4 id="issueTitle"><?php echo "$Issues_ID"; ?></h4>
 
                 <div class="teal z-depth-1">
                     <div class="row" id="tsStripe1">
@@ -85,33 +119,38 @@
 
                     <div class="row" id="tsStripe2">
                         <div class="col s3">
-                            <h6><font color="white">[timestamp]</font></h6>
+                            <h6><font color="white"><?php echo "$Created_Timestamp"; ?></font></h6>
                         </div>
 
                         <div class="col s3">
-                            <h6><font color="white">[timestamp]</font></h6>
+                            <h6><font color="white"><?php echo "$Last_Update_Timestamp"; ?></font></h6>
                         </div>
 
                         <div class="col s3">
-                            <h6><font color="white">[timestamp]</font></h6>
+                            <h6><font color="white"><?php echo "$First_Response_Timestamp"; ?></font></h6>
                         </div>
 
                         <div class="col s3">
-                            <h6><font color="white">pending</font></font></h6>
+                            <h6><font color="white"><?php echo "$Completed_Timestamp"; ?></font></font></h6>
                         </div>
                     </div>
 
                 </div>
 
                 <div id="issueSummary">
-                    <h5>Summary</h5>
-                    <summary>
-                        Issue Summary is to inserted here. This should contain a brief overview about the subject and key details about the issue that the admin adds on top of the submitted issue.
-                    </summary>
-
+                     <div class="row">
+   	 <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"><?php echo "$Summary"; ?></textarea>
+          <label for="textarea1">Issue Summary</label>
+        </div>
+      </div>
+    </form>
+  </div>
                     <div class="row">
                         <div class="col s6">
-                            <b>Status : </b><font color="green">Status 1</font>
+                            <b>Status : </b><font color="green"><?php echo "$Status"; ?></font>
                         </div>
 
                         <div class="col s6">
@@ -136,44 +175,55 @@
                             <h6><font color="white"><b>First Response User</b></font></h6>
                         </div>
                         <div class="col s6">
-                            <h6><font color="white"><b>Completed User</b></font></h6>
+                            <h6><font color="white"><b>Completed Timestamp</b></font></h6>
                         </div>
                     </div>
 
                     <div class="row" id="linkedUsers2">
                         <div class="col s6">
-                            <h6><font color="white">User 12</font></h6>
+                            <h6><font color="white"><?php echo "$First_Response_User"; ?></font></h6>
                         </div>
                         <div class="col s6">
-                            <h6><font color="white">User 42</font></h6>
+                            <h6><font color="white"><?php echo "$Completed_Timestamp"; ?></font></h6>
                         </div>
                     </div>
                 </div>
 
                 <div id="issueDescription">
-                    <h5>Description</h5>
-                    <p>
-                        Issue Description is to inserted here. This should contain detailed information about the issue and all details that the admin adds on top of the submitted issue.
-                    </p>
+                     <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea2" class="materialize-textarea"><?php echo "$Description"; ?></textarea>
+          <label for="textarea2">Description</label>
+        </div>
+      </div>
+    </form>
+  </div>
 
                 </div>
 
                 <div id="chipsLabel">
-                    <h5>Label</h5>
-                    <div class="chip teal">
-                        <font color="white">Issue Label</font>
-                    </div>
+                    <h5>Issue Label</h5>
+                <div class="chip cyan"><i class="close material-icons">close</i>
+<font color="white"><?php echo "$Label"; ?></font>
+  </div>
+
+
                 </div>
 
                 <div id="chipsLocation">
                     <h5>Location</h5>
-                    <div class="chip cyan">
-                        <font color="white">Location 1</font>
+                    <div class="chip cyan"><i class="close material-icons">close</i>
+
+                        <font color="white"><?php echo "$Location"; ?></font>
                     </div>
-                    <div class="chip cyan">
+                    <div class="chip cyan"><i class="close material-icons">close</i>
+
                         <font color="white">Location 2</font>
                     </div>
-                    <div class="chip cyan">
+                    <div class="chip cyan"><i class="close material-icons">close</i>
+
                         <font color="white">Location 3</font>
                     </div>
                 </div>
@@ -188,8 +238,28 @@
             $('select').material_select();
 
             $('.chips').material_chip();
+  $('.chips-initial').material_chip({
+    data: [{
+      tag: 'Issue Label',
+    }],
+  });
+  $('.chips-placeholder').material_chip({
+    placeholder: 'Enter a Issue Label',
+    secondaryPlaceholder: '+Issue',
+  });
         });
+ var chip = {
+    tag: 'chip content',
+    image: '', //optional
+    id: 1, //optional
+  };
     </script>
+
+    <script>
+          $("#fab1").click(function(){
+              $("#issueAssignf").submit();
+          });
+      </script>
 </body>
 
 </html>
